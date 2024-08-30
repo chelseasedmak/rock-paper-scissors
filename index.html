@@ -4,12 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hsy1lrt.css">
 </head>
 
 <body>
 
+    <section id=gameui>
+        <h2> ROCK. PAPER. SCISSORS. </h2>
+        <img src="squiggle-line.svg" alt="line" width="225px">
+
+        <div id="round"></div>
+        <div id="buttons">
+            <div class="rockcontainer">
+                <img src="rock-skeleton (2).svg" alt="skeleton-rock" width="100px" height="100px">
+                <button id="rockBtn">ROCK</button>
+            </div>
+            <div class="papercontainer">
+                <img src="paper-skeleton (1).svg" alt="skeleton-paper" width="100px" height="100px">
+                <button id="paperBtn">PAPER</button>
+            </div>
+            <div class="scissorscontainer">
+                <img src="scissors-skeleton.svg" alt="skeleton-scissors" width="100px" height="100px">
+                <button id="scissorsBtn">SCISSORS</button>
+            </div>
+        </div>
+
+
+        <div id="result"></div>
+        <div id="score"></div>
+
+    </section>
+
+
+    <script src="script.js"></script>
 </body>
+
 
 </html>

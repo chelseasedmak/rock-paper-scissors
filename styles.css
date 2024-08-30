@@ -1,0 +1,95 @@
+body {
+    background-color: #E7E7E1;
+    font-family: "korolev", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: .9em;
+    min-width: 100vh;
+    margin: 8%;
+    border: 1px solid black;
+    border-radius: 24px;
+    padding: 56px 128px 128px 128px;
+}
+
+#gameui {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh;
+    align-items: center;
+    gap: 32px;
+}
+
+h2 {
+    margin-bottom: -24px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+}
+
+
+
+.rockcontainer,
+.papercontainer,
+.scissorscontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 36px 4px 36px 4px;
+    gap: 16px;
+    align-items: center;
+}
+
+#rockBtn,
+#paperBtn,
+#scissorsBtn {
+    font-family: "korolev", sans-serif;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    padding: 8px 20px;
+    margin: 0px 3px 6px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    z-index: 0;
+}
+
+#rockBtn:hover,
+#paperBtn:hover,
+#scissorsBtn:hover {
+    border-color: orangered;
+    color: orangered;
+    background-color: #E7E7E1;
+    border-radius: 0px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transition: border-left-color 0.1s linear 0s, border-top-color 0.1s linear 0.07s, border-right-color 0.1s linear 0.14s;
+}
+
+#round {
+    font-size: .9em;
+    font-weight: bold;
+    color: #414141;
+}
+
+#result {
+    margin-bottom: 24px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #414141;
+}
+
+#score {
+    font-size: .9em;
+    font-weight: 500;
+    color: #414141;
+
+}
