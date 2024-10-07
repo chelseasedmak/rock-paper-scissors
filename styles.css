@@ -4,17 +4,21 @@ body {
     font-weight: 300;
     font-style: normal;
     font-size: .9em;
-    min-width: 100vh;
-    margin: 8%;
+    margin-top: 102px;
+    margin-left: 5%;
+    margin-right: 5%;
     border: 1px solid black;
     border-radius: 24px;
     padding: 56px 128px 128px 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 #gameui {
     display: flex;
     flex-direction: column;
-    min-width: 100vh;
     align-items: center;
     gap: 32px;
 }
@@ -30,8 +34,6 @@ h2 {
     justify-content: center;
 }
 
-
-
 .rockcontainer,
 .papercontainer,
 .scissorscontainer {
@@ -46,10 +48,6 @@ h2 {
 #paperBtn,
 #scissorsBtn {
     font-family: "korolev", sans-serif;
-    position: relative;
-    box-sizing: border-box;
-    display: inline-block;
-    overflow: hidden;
     padding: 8px 20px;
     margin: 0px 3px 6px;
     text-align: center;
@@ -57,8 +55,6 @@ h2 {
     border-radius: 6px;
     text-decoration: none;
     color: black;
-    white-space: nowrap;
-    z-index: 0;
 }
 
 #rockBtn:hover,
@@ -75,9 +71,9 @@ h2 {
 }
 
 #round {
-    font-size: .9em;
+    font-size: 1.1em;
     font-weight: bold;
-    color: #414141;
+    color: orangered;
 }
 
 #result {
@@ -92,4 +88,52 @@ h2 {
     font-weight: 500;
     color: #414141;
 
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0%;
+    }
+
+    h2 {
+        margin-bottom: -16px;
+    }
+
+    #gameui {
+        gap: 16px;
+    }
+
+    #buttons {
+        flex-direction: column;
+    }
+
+    .rockcontainer,
+    .papercontainer,
+    .scissorscontainer {
+        margin: 16px 0;
+    }
+
+    #rockBtn,
+    #paperBtn,
+    #scissorsBtn {
+        font-size: 0.7em;
+        padding: 4px 12px;
+    }
+
+    #result {
+        font-size: 1em;
+        text-align: center;
+    }
 }

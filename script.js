@@ -20,14 +20,14 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice === "Paper") && (computerChoice === "Rock") ||
         (humanChoice === "Scissors") && (computerChoice === "Paper")) {
         humanScore++;
-        result = `You lose this round! ${computerChoice} beats ${humanChoice}.`;
+        result = `You win this round! ${humanChoice} beats ${computerChoice}.`;
 
     } else if (humanChoice === computerChoice) {
         result = ("You tied, go again.");
     }
     else {
         computerScore++;
-        result = `You win this round! ${humanChoice} beats ${computerChoice}.`;
+        result = `You lose this round! ${computerChoice} beats ${humanChoice}.`;
     }
 
     currentRound++;
@@ -37,12 +37,11 @@ function playRound(humanChoice, computerChoice) {
 //function to update score + round 
 function updateScore() {
     document.getElementById('round').textContent = `Round: ${currentRound - 1}`;
-    document.getElementById('score').textContent = `Player: ${computerScore} - Computer: ${humanScore}`;
+    document.getElementById('score').textContent = `Player: ${humanScore} - Computer: ${computerScore}`;
 }
 
 
-
-// function to play game
+//function to play game
 function playGame(humanChoice) {
 
 
