@@ -1,0 +1,139 @@
+body {
+    background-color: #E7E7E1;
+    font-family: "korolev", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: .9em;
+    margin-top: 102px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid black;
+    border-radius: 24px;
+    padding: 56px 128px 128px 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#gameui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+h2 {
+    margin-bottom: -24px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+}
+
+.rockcontainer,
+.papercontainer,
+.scissorscontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 36px 4px 36px 4px;
+    gap: 16px;
+    align-items: center;
+}
+
+#rockBtn,
+#paperBtn,
+#scissorsBtn {
+    font-family: "korolev", sans-serif;
+    padding: 8px 20px;
+    margin: 0px 3px 6px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+}
+
+#rockBtn:hover,
+#paperBtn:hover,
+#scissorsBtn:hover {
+    border-color: orangered;
+    color: orangered;
+    background-color: #E7E7E1;
+    border-radius: 0px;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transition: border-left-color 0.1s linear 0s, border-top-color 0.1s linear 0.07s, border-right-color 0.1s linear 0.14s;
+}
+
+#round {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: orangered;
+}
+
+#result {
+    margin-bottom: 24px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #414141;
+}
+
+#score {
+    font-size: .9em;
+    font-weight: 500;
+    color: #414141;
+
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0%;
+    }
+
+    h2 {
+        margin-bottom: -16px;
+    }
+
+    #gameui {
+        gap: 16px;
+    }
+
+    #buttons {
+        flex-direction: column;
+    }
+
+    .rockcontainer,
+    .papercontainer,
+    .scissorscontainer {
+        margin: 16px 0;
+    }
+
+    #rockBtn,
+    #paperBtn,
+    #scissorsBtn {
+        font-size: 0.7em;
+        padding: 4px 12px;
+    }
+
+    #result {
+        font-size: 1em;
+        text-align: center;
+    }
+}
